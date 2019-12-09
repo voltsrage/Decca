@@ -1,8 +1,0 @@
-hello decca
-get all emails
-get all inbox emails
-read email
-next email
-previous email
-check for new emails
-check new emails
