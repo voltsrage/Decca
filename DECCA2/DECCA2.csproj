@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CADF659-3033-4BC3-B07A-C97E257F5F6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DECCA2</RootNamespace>
+    <AssemblyName>DECCA2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\FancyWinform\FancyWinform\Bunifu UI WinForms 1.11.3.0\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.7.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.7\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.Computing, Version=4.8.0.0, Culture=neutral, PublicKeyToken=8d9bf50ef854734d, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Computing.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.Core, Version=4.8.0.0, Culture=neutral, PublicKeyToken=9651adc37f12bb00, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.Drawing, Version=4.8.0.0, Culture=neutral, PublicKeyToken=e22c8a010c3b081a, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.IO.HDF5, Version=4.8.0.0, Culture=neutral, PublicKeyToken=85055996c33d20cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.IO.HDF5.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.Toolboxes.MachineLearning, Version=4.8.0.0, Culture=neutral, PublicKeyToken=630a0f4f2119eebc, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Toolboxes.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.Toolboxes.Optimization, Version=4.8.0.0, Culture=neutral, PublicKeyToken=d11317283e0d33b5, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Toolboxes.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics.Toolboxes.Statistics, Version=4.8.0.0, Culture=neutral, PublicKeyToken=176aaed3d023b64c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Toolboxes.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.SQLite, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Wpf, Version=2.7.9.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.9\lib\net45\IronPython.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=4.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.4.8.1\lib\net461\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics.Data.Matlab, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Data.Matlab.4.0.0\lib\net40\MathNet.Numerics.Data.Matlab.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics.Data.Text, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.Data.Text.4.0.0\lib\net40\MathNet.Numerics.Data.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.2.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.2.2\lib\net45\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\ILNumerics.4.8.0.0\lib\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aerodynamics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aerodynamics.Designer.cs">
+      <DependentUpon>Aerodynamics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Decca_SpeechToText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Decca_SpeechToText.Designer.cs">
+      <DependentUpon>Decca_SpeechToText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearEquationSolver.cs" />
+    <Compile Include="RoskamDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoskamDesign.Designer.cs">
+      <DependentUpon>RoskamDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AircraftMissionType.cs" />
+    <Compile Include="GAAircraftAirfoilDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GAAircraftAirfoilDesign.Designer.cs">
+      <DependentUpon>GAAircraftAirfoilDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltitudeCalculator.cs" />
+    <Compile Include="ConvertUnits.cs" />
+    <Compile Include="RoskamFuselageDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoskamFuselageDesign.Designer.cs">
+      <DependentUpon>RoskamFuselageDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemHorizTail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemHorizTail.Designer.cs">
+      <DependentUpon>SystemHorizTail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsEngApproachAircraftDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsEngApproachAircraftDesign.Designer.cs">
+      <DependentUpon>SystemsEngApproachAircraftDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeccaCalculato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaCalculato.Designer.cs">
+      <DependentUpon>DeccaCalculato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeccaEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaEmail.Designer.cs">
+      <DependentUpon>DeccaEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeccaWeather.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaWeather.Designer.cs">
+      <DependentUpon>DeccaWeather.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeccaWebSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaWebSearch.Designer.cs">
+      <DependentUpon>DeccaWebSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeccaMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaMain.Designer.cs">
+      <DependentUpon>DeccaMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EntryModel.cs" />
+    <Compile Include="DeccaCd0Calculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaCd0Calculator.Designer.cs">
+      <DependentUpon>DeccaCd0Calculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadCombos.cs" />
+    <Compile Include="Missionstats.cs" />
+    <Compile Include="PerfOfV.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="PropEfficiency.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GAAircraftDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GAAircraftDesign.Designer.cs">
+      <DependentUpon>GAAircraftDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scraper.cs" />
+    <Compile Include="BaseWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsFlapAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemsFlapAdjustment.Designer.cs">
+      <DependentUpon>SystemsFlapAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemsWingDesign.Designer.cs">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemWingDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemWingDesign.Designer.cs">
+      <DependentUpon>SystemWingDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vmax_Prop.cs" />
+    <Compile Include="WeatherForecast.cs" />
+    <Compile Include="WeatherInfo.cs" />
+    <Compile Include="WebSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebSearch.Designer.cs">
+      <DependentUpon>WebSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeccaMediaPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeccaMediaPlayer.Designer.cs">
+      <DependentUpon>DeccaMediaPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WingDetailEst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WingDetailEst.Designer.cs">
+      <DependentUpon>WingDetailEst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoskamWingEstimateJet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoskamWingEstimateJet.Designer.cs">
+      <DependentUpon>RoskamWingEstimateJet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoskamWingEstimateProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoskamWingEstimateProp.Designer.cs">
+      <DependentUpon>RoskamWingEstimateProp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Aerodynamics.resx">
+      <DependentUpon>Aerodynamics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseWindow.resx">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Decca_SpeechToText.resx">
+      <DependentUpon>Decca_SpeechToText.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoskamDesign.resx">
+      <DependentUpon>RoskamDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GAAircraftAirfoilDesign.resx">
+      <DependentUpon>GAAircraftAirfoilDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoskamFuselageDesign.resx">
+      <DependentUpon>RoskamFuselageDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemHorizTail.resx">
+      <DependentUpon>SystemHorizTail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsEngApproachAircraftDesign.resx">
+      <DependentUpon>SystemsEngApproachAircraftDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaCalculato.resx">
+      <DependentUpon>DeccaCalculato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaEmail.resx">
+      <DependentUpon>DeccaEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaWeather.resx">
+      <DependentUpon>DeccaWeather.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaWebSearch.resx">
+      <DependentUpon>DeccaWebSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaMain.resx">
+      <DependentUpon>DeccaMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaCd0Calculator.resx">
+      <DependentUpon>DeccaCd0Calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="GAAircraftDesign.resx">
+      <DependentUpon>GAAircraftDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemsFlapAdjustment.resx">
+      <DependentUpon>SystemsFlapAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemWingDesign.resx">
+      <DependentUpon>SystemWingDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSearch.resx">
+      <DependentUpon>WebSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeccaMediaPlayer.resx">
+      <DependentUpon>DeccaMediaPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WingDetailEst.resx">
+      <DependentUpon>WingDetailEst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoskamWingEstimateJet.resx">
+      <DependentUpon>RoskamWingEstimateJet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoskamWingEstimateProp.resx">
+      <DependentUpon>RoskamWingEstimateProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\11-Artificial-Intelligence-Trends-Every-Business-in-2019-Must-Know.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Editing-Line-Width-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Mail-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Windows-Media-Player-12-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Text-Edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\News-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\weather-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Categories-applications-internet-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\settings-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\email-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\BigDataAI-icon-logo-transparent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\Database.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\Database_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\340698.jpg" />
+    <Content Include="Images\green-intro-concept-abstract-soft-gradient-background_415nn39ml__F0000.png" />
+    <Content Include="Images\jmoelrcytk5x.jpg" />
+    <None Include="bin32\libiomp5md.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bin32\mkl_custom.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bin64\libiomp5md.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bin64\mkl_custom.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Images\Window\close [#1511].png" />
+    <None Include="Images\Window\multitasking [#1440].png" />
+    <None Include="Images\Window\minus [#1514].png" />
+    <None Include="Images\maximize %282%29.png" />
+    <None Include="Images\maximize %281%29.png" />
+    <None Include="Images\maximize.png" />
+    <None Include="Images\media-btnvolum.png" />
+    <None Include="Images\speaker.png" />
+    <None Include="Images\mediaplayervolumeup.png" />
+    <None Include="Images\cancel.png" />
+    <None Include="Images\multi-tab.png" />
+    <None Include="Images\substract.png" />
+    <None Include="Images\original.jpg" />
+    <None Include="Images\rave.jpg" />
+    <None Include="Images\mediaplayeraddplaylist.png" />
+    <None Include="Images\media-btnstop.png" />
+    <None Include="Images\media-btnfastfarword.png" />
+    <None Include="Images\media-next.png" />
+    <None Include="Images\media-btnpause.png" />
+    <None Include="Images\media-btnplay.png" />
+    <None Include="Images\media-btnprevous.png" />
+    <None Include="Images\media-btnfastreverse.png" />
+    <None Include="Images\Trent Bas Music player.png" />
+    <None Include="Images\television-08-icon.png" />
+    <None Include="Images\radio-metal-2-icon.png" />
+    <None Include="Images\folder-music-share-icon.png" />
+    <None Include="Images\Music-Blue-Folder-icon.png" />
+    <None Include="Images\Occupations-Musician-Male-Dark-icon.png" />
+    <None Include="Images\document-movie-2-icon.png" />
+    <None Include="Images\Folder-Open-icon.png" />
+    <None Include="Images\playstation-cross-icon.png" />
+    <None Include="Images\restore-icon.png" />
+    <None Include="Images\minimize-icon.png" />
+    <None Include="Images\WEATHER APP ICONS\WEATHER ICONS\33.png" />
+    <None Include="Images\WEATHER APP ICONS\WEATHER ICONS\34.png" />
+    <None Include="Images\Blue-lines-abstract-background_2560x1600.jpg" />
+    <None Include="Images\1.jpg" />
+    <None Include="Images\15418139733_adf9979c94_k.jpg" />
+    <None Include="Images\July-15-Sailing---Courtesy-of-Sunsail.jpg" />
+    <None Include="Images\SvgBack2.jpg" />
+    <None Include="Images\SvgBack1.jpg" />
+    <None Include="Images\VincyBackground1.jpg" />
+    <None Include="Images\WEATHER APP ICONS\WEATHER ICONS\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
