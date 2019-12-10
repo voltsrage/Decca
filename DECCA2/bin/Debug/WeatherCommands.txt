@@ -1,0 +1,9 @@
+close weather
+hello weather
+what is todays temperature
+What is today like
+what is the temperature
+what is todays condition
+what is the condition today
+what is the weather condition
+whats the temperature
